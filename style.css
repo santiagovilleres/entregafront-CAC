@@ -25,6 +25,10 @@ body{
     
 }
 
+.nav div a img{
+    height: 20px;
+}
+
 .nav > div > a{
     text-decoration: none;
     color: #ffffff;
@@ -102,13 +106,6 @@ body{
 
 }
 
-.portada canvas{
-    width: 100vw;
-    max-height: 90vh;
-    background-color: rgb(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
 .portada div{
     display: flex;
     justify-content: center;
@@ -137,7 +134,7 @@ body{
     display: block;
 }
 
-.portada a{
+.btn{
     padding: 1rem 2rem;
     text-decoration: none;
     font-size: 1.2rem;
@@ -146,12 +143,14 @@ body{
     background-color: #9f3647;
     border-radius: 5px;
     z-index: 2;
+    border: none;
 }
 
-.portada a:hover{ 
+.btn:hover{
     transform: scale(0.95); 
     transition: transform 0.5s ease;
-    box-shadow: 0 0 10px #ffffff; 
+    box-shadow: 0 0 10px #ffffff;
+    background-color: #9f3647; 
 }
 
 /*BUSCADOR*/
@@ -161,7 +160,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #9f3647;
 }
 
 .buscador div{
@@ -213,6 +211,13 @@ body{
     box-shadow: 0 0 5px #ffffff; 
 }
 
+.separador{
+    border-bottom: 1px solid #9f3647;
+    height: 1px;
+    width: 80%; 
+    margin: 0 auto; 
+}
+
 /*TENDENCIAS*/
 
 .tendencias{
@@ -222,7 +227,6 @@ body{
     flex-direction: column;
     gap: 3rem;
     padding-bottom: 5rem;
-    border-bottom: 2px solid #9f3647;
 }
 
 .tendencias h3{
@@ -442,19 +446,39 @@ body{
     }
 
     .buscador h3{
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .buscadorBoton{
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .buscadorInput{
+        padding: 0.4rem 0.8rem;
         font-size: 1rem;
     }
 
     .tendencias h3{
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .peliculas{
+        width: 70%;
+        flex-direction: column;
     }
 
     .pelicula{
-        flex-direction: column;
+        width: 100%;
+    }
+
+    .pelicula img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .pelicula h4{
+        font-size: 2rem;
     }
 
     .footer{
@@ -465,4 +489,86 @@ body{
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+/*REGISTRO*/
+
+.headerRegistro{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.headerRegistro a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-left: 30px;
+}
+
+.headerRegistro a img{
+    height: 15px;
+}
+
+.bodyRegistro{
+    background: linear-gradient(to right top, #24242473, #24242473), url(bg-register.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.mainRegistro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.formRegistro{
+    background-color: rgb(42, 42, 42);
+    padding: 20px 50px;
+    width: 25%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formRegistro h2{
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.formRegistro input, .formRegistro select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid #9f3647;
+    border-radius: 25px;
+    background-color: #333;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.formRegistro input[type="submit"] {
+    background-color: #9f3647;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+
+@media screen and (max-width: 1200px){
+    .formRegistro{
+        width: 100%;
+        height: 80vh;
+    }
+    .formRegistro h2{
+        font-size: 1.8rem;
+    }
+
 }
